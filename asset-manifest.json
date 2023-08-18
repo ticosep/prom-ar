@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/prom-ar/static/css/main.e6c13ad2.css",
+    "main.js": "/prom-ar/static/js/main.fa317abc.js",
+    "static/js/787.aaf3da1d.chunk.js": "/prom-ar/static/js/787.aaf3da1d.chunk.js",
+    "static/media/pattern-m.patt": "/prom-ar/static/media/pattern-m.559432cb8b603102b0ea.patt",
+    "index.html": "/prom-ar/index.html",
+    "main.e6c13ad2.css.map": "/prom-ar/static/css/main.e6c13ad2.css.map",
+    "main.fa317abc.js.map": "/prom-ar/static/js/main.fa317abc.js.map",
+    "787.aaf3da1d.chunk.js.map": "/prom-ar/static/js/787.aaf3da1d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.fa317abc.js"
+  ]
+}
