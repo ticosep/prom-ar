@@ -1,39 +1,19 @@
-import React, { Component } from "react";
-
-import { AFrameRenderer, Marker } from "react-web-ar";
 import patternPatt from "../patterns/pattern-m.patt";
+import shiba from "../models/shiba.glb";
 
-export class ArApp extends Component {
-  render() {
-    return (
-      <AFrameRenderer
-        arToolKit={{
-          sourceType: "webcam",
-        }}
-      >
-        <Marker
-          parameters={{
-            preset: "pattern",
-            type: "pattern",
-            url: patternPatt,
-          }}
-        >
-          <a-box
-            color="pink"
-            material="opacity: 1;"
-            position="0 0.003 0"
-            scale="0.4 0.4 0.4"
-          >
-            <a-animation
-              attribute="rotation"
-              to="360 0 0"
-              dur="5000"
-              easing="linear"
-              repeat="indefinite"
-            />
-          </a-box>
-        </Marker>
-      </AFrameRenderer>
-    );
-  }
-}
+export const ArApp = () => {
+  return (
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    >
+      <a-marker-camera preset="pattern" type="pattern" url={patternPatt}>
+        <a-entity gltf-model={shiba} rotation="-90 0 0"></a-entity>
+      </a-marker-camera>
+      <a-entity
+        camera
+        orbit-controls="target: 0 1.6 -0.5; minDistance: 0.5; maxDistance: 180; initialPosition: 0 5 15"
+      ></a-entity>
+    </a-scene>
+  );
+};
