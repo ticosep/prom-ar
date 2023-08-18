@@ -10,7 +10,6 @@ export class ArApp extends Component {
         arToolKit={{
           sourceType: "webcam",
         }}
-        stats
       >
         <Marker
           parameters={{
